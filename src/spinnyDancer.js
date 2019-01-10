@@ -10,4 +10,5 @@ makeSpinnyDancer.prototype.constructor = makeSpinnyDancer;
 
 makeSpinnyDancer.prototype.step = function () {
   makeDancer.prototype.step.call(this);
+  this.$node.fadeOut('slow').fadeIn('slow');
 };
