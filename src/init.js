@@ -25,5 +25,13 @@ $(document).ready(function() {
       Math.random() * 1000 // time between steps
     );
     $('body').append(dancer.$node);
+    
+    window.dancers.push(dancer);
+  });
+  
+  $('.lineupDancersButton').on('click', function(event) {
+    window.dancers.forEach(function(el) {
+      console.log(el);
+    });
   });
 });
