@@ -23,11 +23,12 @@ makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
 // var oldStep = this.step;
-var oldStep = makeBlinkyDancer.prototype.step;
+// var oldStep = makeBlinkyDancer.prototype.step;
 
 makeBlinkyDancer.prototype.step = function () {
   // var oldStep = makeBlinkyDancer.prototype.step;
-  oldStep();
+  // oldStep();
+  makeDancer.prototype.step.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
