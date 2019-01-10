@@ -12,13 +12,13 @@ describe('spinnyDancer', function() {
     expect(spinnyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its fade out', function() {
+  it('should have a step function that makes it fade out', function() {
     sinon.spy(spinnyDancer.$node, 'fadeOut');
     spinnyDancer.step();
     expect(spinnyDancer.$node.fadeOut.called).to.be.true;
   });
   
-  it('should have a step function that makes its fade in', function() {
+  it('should have a step function that makes it fade in', function() {
     sinon.spy(spinnyDancer.$node, 'fadeIn');
     spinnyDancer.step();
     expect(spinnyDancer.$node.fadeIn.called).to.be.true;

@@ -10,4 +10,5 @@ makeAwkwardDancer.prototype.constructor = makeAwkwardDancer;
 
 makeAwkwardDancer.prototype.step = function () {
   makeDancer.prototype.step.call(this);
+  this.$node.animate({opacity: '0.5'});
 };
