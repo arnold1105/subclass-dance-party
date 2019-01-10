@@ -6,7 +6,6 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // so we must keep a copy of the old version of this function
 
   // var oldStep = blinkyDancer.step;
-  var oldStep = this.step;
 
   // blinkyDancer.step = function() {
   //   // call the old version of step at the beginning of any call to this new version of step
@@ -23,7 +22,11 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
+// var oldStep = this.step;
+var oldStep = makeBlinkyDancer.prototype.step;
+
 makeBlinkyDancer.prototype.step = function () {
+  // var oldStep = makeBlinkyDancer.prototype.step;
   oldStep();
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
