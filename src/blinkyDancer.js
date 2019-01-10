@@ -1,5 +1,7 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node = $('<span class="blinkyDancer"></span>');
+  this.setPosition(top, left);
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
@@ -13,3 +15,7 @@ makeBlinkyDancer.prototype.step = function () {
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
 };
+
+// makeBlinkyDancer.prototype.setPosition = function(top, left) {
+//   makeDancer.prototype.setPosition.call(this);
+// };
