@@ -27,6 +27,7 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     
     window.dancers.push(dancer);
+    console.log(dancer.$node.position());
   });
   
   $('.lineupDancersButton').on('click', function(event) {
@@ -35,8 +36,10 @@ $(document).ready(function() {
     });
   });
   
-  // $(dancer.$node).mouseover(function() {
-    
+  // $('.awkwardDancer').mouseover(function() {
+  //   window.dancers.forEach(function(el) {
+  //     el.lineUp();
+  //   });
   // });
   
 });
