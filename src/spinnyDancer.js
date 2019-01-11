@@ -1,14 +1,13 @@
-var makeSpinnyDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="spinnyDancer"></span>');
-  this.setPosition(top, left);
+var SpinnyDancer = function(top, left, timeBetweenSteps) {
+  Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('spinnyDancer');
 };
 
-makeSpinnyDancer.prototype = Object.create(makeDancer.prototype);
+SpinnyDancer.prototype = Object.create(Dancer.prototype);
 
-makeSpinnyDancer.prototype.constructor = makeSpinnyDancer;
+SpinnyDancer.prototype.constructor = SpinnyDancer;
 
-makeSpinnyDancer.prototype.step = function () {
-  makeDancer.prototype.step.call(this);
+SpinnyDancer.prototype.step = function () {
+  Dancer.prototype.step.call(this);
   this.$node.fadeOut('slow').fadeIn('slow');
 };

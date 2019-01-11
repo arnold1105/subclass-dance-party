@@ -1,14 +1,13 @@
-var makeAwkwardDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="awkwardDancer"></span>');
-  this.setPosition(top, left);
+var AwkwardDancer = function(top, left, timeBetweenSteps) {
+  Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('awkwardDancer');
 };
 
-makeAwkwardDancer.prototype = Object.create(makeDancer.prototype);
+AwkwardDancer.prototype = Object.create(Dancer.prototype);
 
-makeAwkwardDancer.prototype.constructor = makeAwkwardDancer;
+AwkwardDancer.prototype.constructor = AwkwardDancer;
 
-makeAwkwardDancer.prototype.step = function () {
-  makeDancer.prototype.step.call(this);
-  this.$node.animate({opacity: '0.5'});
+AwkwardDancer.prototype.step = function () {
+  Dancer.prototype.step.call(this);
+  // this.$node.animate({opacity: '0.5'});
 };

@@ -2,8 +2,9 @@ body, html{
   height:100%;
 }
 body{
+  background-image: url("Lighting-Services-Digital-Style-Productions.jpg");
+  background-size: cover;
   margin: 0px;
-  background-color:#444;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,32 +22,34 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  /*border:10px solid red;
   border-radius:10px;
-  position:absolute;
+  position:absolute;*/
 }
 
 .blinkyDancer{
-  border:60px solid blue;
-  border-radius:60px;
+  content: url("https://i.gifer.com/1frv.gif");
   position:absolute;
 }
 
 .spinnyDancer{
   position:absolute;
-  border-top: 16px solid blue;
-  border-right: 16px solid green;
-  border-bottom: 16px solid red;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
+  content: url("https://i.gifer.com/6os.gif");
   animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+  width: 5%;
+  height: 25%;
 }
 
 .awkwardDancer{
-  border:60px solid yellow;
-  border-radius:60px;
   position:absolute;
+  content: url("https://i.gifer.com/40Oj.gif");
+  width: 10%;
+  height: 25%;
+}
+
+.addDancerButton{
+  
 }
 
 @-webkit-keyframes spin {

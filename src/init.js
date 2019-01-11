@@ -31,7 +31,12 @@ $(document).ready(function() {
   
   $('.lineupDancersButton').on('click', function(event) {
     window.dancers.forEach(function(el) {
-      console.log(el);
+      el.lineUp();
     });
   });
+  
+  // $(dancer.$node).mouseover(function() {
+    
+  // });
+  
 });
