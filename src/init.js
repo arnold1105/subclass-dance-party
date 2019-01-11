@@ -27,7 +27,7 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     
     window.dancers.push(dancer);
-    console.log(dancer.$node.position());
+    // console.log(dancer.$node.position());
   });
   
   $('.lineupDancersButton').on('click', function(event) {
@@ -39,6 +39,14 @@ $(document).ready(function() {
   // $('.awkwardDancer').mouseover(function() {
   //   window.dancers.forEach(function(el) {
   //     el.lineUp();
+  //   });
+  // });
+  
+  // $('.doAJigButton').on('click', function(event) {
+  //   var randomDancer = dancers[Math.floor(Math.random() * dancers.length)];
+  //   console.log(`random dancer: ${randomDancer.$node.position()}`);
+  //   window.dancers.forEach(function(el) {
+  //     // console.log(el.$node.position());
   //   });
   // });
   
